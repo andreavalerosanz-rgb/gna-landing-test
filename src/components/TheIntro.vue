@@ -1,5 +1,5 @@
 <template>
-<section class="w-full bg-white pt-20 pb-16 px-6 lg:px-[130px]">
+<section id="hotel" class="w-full bg-white pt-20 pb-16 px-6 lg:px-[130px]">
   <div class="w-full max-w-[1440px] mx-auto flex flex-col items-center">
     
     <h2 class="text-4xl md:text-[54px] font-normal text-gray-900 leading-[1.2] text-center mb-10 tracking-tight">

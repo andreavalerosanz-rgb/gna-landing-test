@@ -46,6 +46,7 @@ onUnmounted(() => {
 })
 </script>
 
+
 <template>
   <header 
     class="relative w-full h-dvh bg-cover bg-top bg-no-repeat" 
@@ -60,7 +61,9 @@ onUnmounted(() => {
       <div class="px-6 md:px-16 lg:px-24 flex items-center justify-between">
         
         <div class="flex flex-col relative z-50">
+          <a href="#">
           <img :src="logoSrc" alt="GNA Hotel Solutions" class="w-[290px] md:w-[330px] object-contain transition-opacity duration-300" />
+          </a>
         </div>
         
         <button 
@@ -88,7 +91,7 @@ onUnmounted(() => {
             </a>
           </li>
           <li>
-            <a href="#reservar" 
+            <a href="#" 
                :class="[
                  'px-8 py-2.5 rounded-full border transition-all duration-300 border-white hover:bg-white',
                  isScrolled ? 'hover:text-brand-pink' : 'hover:text-brand-dark'
