@@ -46,7 +46,6 @@ onUnmounted(() => {
 })
 </script>
 
-
 <template>
   <header 
     class="relative w-full h-dvh bg-cover bg-top bg-no-repeat" 
@@ -58,7 +57,7 @@ onUnmounted(() => {
 
     <nav :class="['fixed top-0 left-0 w-full z-50 transition-all duration-300 text-white', navClasses]">
       
-      <div class="px-6 md:px-16 lg:px-24 flex items-center justify-between">
+      <div class="py-1 px-6 md:px-16 lg:px-24 flex items-center justify-between">
         
         <div class="flex flex-col relative z-50">
           <a href="#">
@@ -66,9 +65,13 @@ onUnmounted(() => {
           </a>
         </div>
         
+        <!-- Botón móvil: Dinámico. Vuelve a 0 al hacer scroll -->
         <button 
           @click="toggleMenu" 
-          class="md:hidden relative z-50 p-2 focus:outline-none"
+          :class="[
+            'md:hidden relative z-50 p-2 focus:outline-none transition-transform duration-300',
+            isScrolled ? 'translate-y-0' : '-translate-y-2'
+          ]"
           aria-label="Toggle Menu"
         >
           <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +80,11 @@ onUnmounted(() => {
           </svg>
         </button>
         
-        <ul class="hidden md:flex items-center gap-12 text-lg font-medium">
+        <!-- MENÚ: Dinámico. Vuelve a 0 al hacer scroll -->
+        <ul :class="[
+          'hidden md:flex items-center gap-12 text-xl font-large transition-transform duration-300',
+          isScrolled ? 'translate-y-0' : '-translate-y-3'
+        ]">
           <li>
             <a href="#hotel" 
                :class="['transition-colors drop-shadow-sm', isScrolled ? 'hover:text-brand-dark' : 'hover:text-brand-pink']">
@@ -93,7 +100,7 @@ onUnmounted(() => {
           <li>
             <a href="#" 
                :class="[
-                 'px-8 py-2.5 rounded-full border transition-all duration-300 border-white hover:bg-white',
+                 'px-4 py-1.5 rounded-full border transition-all duration-300 border-white hover:bg-white',
                  isScrolled ? 'hover:text-brand-pink' : 'hover:text-brand-dark'
                ]"
             >

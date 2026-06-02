@@ -42,7 +42,7 @@ const filteredProjects = computed(() => {
 <template>
   <section id="ofertas" class="w-full bg-white">
 
-    <div class="w-full bg-brand-light py-4 sticky top-[77px] z-40 px-6 lg:px-[130px]">
+    <div class="w-full bg-brand-light py-4 sticky top-[85px] z-40 px-6 lg:px-[130px]">
       
       <div class="w-full max-w-[1440px] mx-auto flex items-center justify-start gap-5">
         
