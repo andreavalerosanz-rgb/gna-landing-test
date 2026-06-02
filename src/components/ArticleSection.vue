@@ -49,12 +49,13 @@ const filteredProjects = computed(() => {
 
 <template>
   <section id="ofertas" class="w-full bg-white">
-    
-    <div class="w-full bg-brand-light py-6">
-      <div class="max-w-[950px] mx-auto px-6 md:px-12 flex items-center gap-4">
-        <label for="categoryFilter" class="text-brand-dark text-lg font-medium">
-          Filtrar per
-        </label>
+
+
+<div class="w-full bg-brand-light py-6 sticky top-[77px] z-40">
+  <div class="max-w-[1200px] mx-auto px-6 md:px-12 flex items-center justify-start gap-4">
+    <label for="categoryFilter" class="text-brand-dark text-lg font-medium">
+      Filtrar per
+    </label>
         <div class="relative w-64">
             <!--cuando cambie el selected filter se auto triggerea la funcion del filtro
              si no cambia el filtro pero se reprinta el componente no triggerea otra vez y ahorramos rendimiento -->
