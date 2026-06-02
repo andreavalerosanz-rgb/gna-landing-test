@@ -27,40 +27,40 @@ defineProps({
 <template>
   <article 
     :class="[
-      'flex flex-col gap-8 md:gap-12 lg:gap-16 items-center w-full',
-      isReversed ? 'md:flex-row-reverse' : 'md:flex-row'
+      'flex flex-col lg:items-center justify-between w-full gap-10 lg:gap-0',
+      isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
     ]"
   >
     
-    <div class="w-full md:w-1/2">
+    <div class="w-full lg:w-[35%]">
       <img 
         :src="image" 
         :alt="title" 
-        class="w-full rounded-2xl md:rounded-[2rem] object-cover shadow-lg aspect-[4/3] md:aspect-auto md:h-72 lg:h-[22rem]" 
+        class="w-full rounded-[1.5rem] md:rounded-[2rem] object-cover shadow-md aspect-[4/3]" 
       />
     </div>
 
-    <div class="w-full md:w-1/2 flex flex-col justify-center text-left">
+    <div class="w-full lg:w-[60%] flex flex-col justify-center items-start text-left py-4">
       
-      <div class="flex flex-wrap gap-2 mb-5">
+      <div class="flex flex-wrap gap-3 mb-6 w-full">
         <span 
           v-for="tag in tags" 
           :key="tag" 
-          class="px-4 py-1 text-[0.65rem] font-semibold text-white bg-brand-pink rounded-full"
+          class="px-5 py-3 text-[1.7dvh] tracking-wide text-white bg-brand-pink rounded-3xl leading-none inline-flex items-center justify-center"
         >
           {{ tag }}
         </span>
       </div>
 
-      <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-4">
+      <h3 class="text-2xl md:text-[28px] text-black font-bold mb-5 leading-tight w-full">
         {{ title }}
       </h3>
 
-      <p class="text-[0.95rem] text-brand-dark leading-relaxed mb-6">
+      <p class="text-[1.7dvh] leading-relaxed text-black  mb-6 w-full">
         {{ description }}
       </p>
 
-      <a href="#" class="text-brand-pink font-medium text-sm hover:underline w-max">
+      <a href="#" class="text-brand-pink font-medium text-[1.7dvh] underline hover:no-underline w-max">
         Més informació
       </a>
       

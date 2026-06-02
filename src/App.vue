@@ -6,7 +6,7 @@ import TheFooter from './components/TheFooter.vue'
 </script>
 
 <template>
-  <div class="min-h-screen bg-white text-brand-dark font-sans">
+  <div class="min-h-screen bg-white text-brand-dark font-sans ">
     <TheHero/> 
     <TheIntro/> 
     <ArticleSection/> 

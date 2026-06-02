@@ -8,14 +8,14 @@ let observer = null
 
 const navClasses = computed(() => {
   return (isScrolled.value || isMenuOpen.value)
-    ? 'bg-brand-pink shadow-md py-3'
+    ? 'bg-brand-pink py-3'
     : 'bg-transparent pt-6 pb-4' 
 })
 
-const logoSolutionsClass = computed(() => {
+const logoSrc = computed(() => {
   return (isScrolled.value || isMenuOpen.value)
-    ? 'text-white'
-    : 'text-brand-pink'
+    ? '/logo-gnahs-full-white.png' 
+    : '/logo-gnahs-white.png' 
 })
 
 const toggleMenu = () => {
@@ -47,32 +47,22 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- bg-top en lugar de bg-center para mostrar el cielo -->
   <header 
     class="relative w-full h-dvh bg-cover bg-top bg-no-repeat" 
     style="background-image: url('/girona.jpg');"
   >
     <div ref="sentinel" class="absolute top-0 left-0 w-full h-1 pointer-events-none opacity-0"></div>
 
-    <!-- Degradado original del figma -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent via-50% to-black/40"></div>
 
     <nav :class="['fixed top-0 left-0 w-full z-50 transition-all duration-300 text-white', navClasses]">
       
       <div class="px-6 md:px-16 lg:px-24 flex items-center justify-between">
         
-        <!-- LOGO: Escalado a text-4xl -->  
         <div class="flex flex-col relative z-50">
-          <span class="text-4xl tracking-tight leading-none">
-            <span class="font-light text-white">GNAHotel</span><span :class="['font-bold transition-colors', logoSolutionsClass]">Solutions</span>
-          </span>
-          <!-- Subtítulo escalado proporcionalmente -->
-          <span class="text-[0.85rem] mt-1 text-white leading-none -ml-[1px]">
-            strategy & e-technology for success
-          </span>
+          <img :src="logoSrc" alt="GNA Hotel Solutions" class="w-[290px] md:w-[330px] object-contain transition-opacity duration-300" />
         </div>
         
-        <!-- Botón móvil -->
         <button 
           @click="toggleMenu" 
           class="md:hidden relative z-50 p-2 focus:outline-none"
@@ -84,7 +74,6 @@ onUnmounted(() => {
           </svg>
         </button>
         
-        <!-- MENÚ: Textos más grandes -->
         <ul class="hidden md:flex items-center gap-12 text-lg font-medium">
           <li>
             <a href="#hotel" 
@@ -131,7 +120,6 @@ onUnmounted(() => {
       </div>
     </nav>
     
-    <!-- TITULO PRINCIPAL: Cambiado a font-bold y mas grande -->
     <div class="relative z-10 flex h-full items-end justify-center px-4 pb-28 md:pb-40">
       <h1 class="text-6xl md:text-8xl lg:text-[110px] font-bold tracking-wide text-white drop-shadow-lg">
         GNA HOTEL SOLUTIONS
