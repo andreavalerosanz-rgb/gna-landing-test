@@ -3,7 +3,7 @@
 A fully responsive, modern landing page built as a technical assignment for GNA Hotel Solutions. The project focuses on clean architecture, performance optimization, and pixel-perfect design matching the provided Figma mockups.
 
 ## 🚀 Live Demo
-
+https://gnahotel.netlify.app/
 
 ## 🛠️ Tech Stack
 * **Framework:** Vue 3 (Composition API / `<script setup>`)
