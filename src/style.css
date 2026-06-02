@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  :root {
+    --brand-pink: #e00069; 
+    --brand-light: #f1d0d6; 
+    --brand-dark: #333333;
+
+    --brand-font: "Open Sans", system-ui, sans-serif;
+
+    --background: #fafafa;
+    --foreground: #000000;
+  }
+  
+  .dark {
+    --background: #000000;
+    --foreground: #fafafa;
+  }
+}
+
+@theme {
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-light: var(--brand-light);
+  --color-brand-dark: var(--brand-dark);
+  
+  --font-sans: var(--brand-font);
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
