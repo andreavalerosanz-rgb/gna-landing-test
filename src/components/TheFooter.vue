@@ -12,7 +12,7 @@
         />
       </div>
 
-      <!-- RIGHT: on mobile full width, on lg the existing layout -->
+      <!-- RIGHT: enlaces -->
       <div class="flex flex-col gap-8 lg:gap-12 w-full md:ml-auto md:w-auto lg:pr-40">
 
         <div class="flex flex-row gap-8 sm:gap-12 lg:gap-37 justify-between md:justify-start">
