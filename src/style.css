@@ -2,11 +2,14 @@
 
 @layer components {
     .layout-inner{
-      @apply w-full max-w-[150dvh] mx-auto lg:pb-[20px];
+      @apply w-full max-w-[150dvh] mx-auto lg:pb-[20px] px-6 lg:px-0;
     }
     .layout-outer{
       @apply w-full px-6 md:px-16 lg:px-[60px];
     }
+  .footer-nav-start {
+    margin-left: max(0px, calc((100vw - 150dvh) / 2 + 150dvh * 0.60));
+  }
   }
 
 @layer base {
