@@ -31,7 +31,6 @@ defineProps({
       isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
     ]"
   >
-    
     <div class="w-full lg:w-[35%]">
       <img 
         :src="image" 
@@ -42,7 +41,7 @@ defineProps({
 
     <div class="w-full lg:w-[60%] flex flex-col justify-center items-start text-left py-4">
       
-      <div class="flex flex-wrap gap-3 mb-6 w-full">
+      <div class="flex flex-wrap gap-3 mb-6">
         <span 
           v-for="tag in tags" 
           :key="tag" 
@@ -52,15 +51,15 @@ defineProps({
         </span>
       </div>
 
-      <h3 class="text-2xl md:text-[28px] text-black font-bold mb-5 leading-tight w-full">
+      <h3 class="text-2xl md:text-[28px] text-black font-bold mb-5 leading-tight">
         {{ title }}
       </h3>
 
-      <p class="text-[1.7dvh] leading-relaxed text-black  mb-6 w-full">
+      <p class="text-[1.7dvh] leading-relaxed text-black mb-6">
         {{ description }}
       </p>
 
-      <a href="#" class="text-brand-pink font-medium text-[1.7dvh] underline hover:no-underline w-max">
+      <a href="#" class="text-brand-pink font-medium text-[1.7dvh] underline hover:no-underline">
         Més informació
       </a>
       

@@ -42,9 +42,9 @@ const filteredProjects = computed(() => {
 <template>
   <section id="ofertas" class="w-full bg-white">
 
-    <div class="w-full bg-brand-light py-4 sticky top-[7dvh] z-40 px-6 lg:px-[130px]">
+    <div class="w-full bg-brand-light py-4 sticky top-[7dvh] z-40">
       
-      <div class="w-full max-w-[1440px] mx-auto flex items-center justify-start gap-5">
+      <div class="layout-inner pb-0 flex items-center justify-start gap-5">
         
         <label for="categoryFilter" class="text-gray-900 text-[22px] font-normal whitespace-nowrap">
           Filtrar per
@@ -71,9 +71,9 @@ const filteredProjects = computed(() => {
       </div>
     </div>
 
-    <div class="w-full px-6 lg:px-[130px] py-20">
+    <div class="w-full py-20">
       
-      <div class="w-full max-w-[1440px] mx-auto flex flex-col gap-20 lg:gap-28">
+      <div class="layout-inner flex flex-col gap-20 lg:gap-28">
         
         <ArticleCard 
           v-for="(project, index) in filteredProjects" 

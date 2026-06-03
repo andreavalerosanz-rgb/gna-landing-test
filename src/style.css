@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+@layer components {
+    .layout-inner{
+      @apply w-full max-w-[150dvh] mx-auto lg:pb-[20px];
+    }
+    .layout-outer{
+      @apply w-full px-6 md:px-16 lg:px-[60px];
+    }
+  }
+
 @layer base {
   html {
     scroll-behavior: smooth;
